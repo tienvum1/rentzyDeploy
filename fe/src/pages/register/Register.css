@@ -1,0 +1,183 @@
+/* General container styling */
+.register-container {
+  min-height: 80vh;
+  background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card styling for the register form */
+.register-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Heading */
+.register-card h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Form group styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #ff914d;
+  box-shadow: 0 0 0 3px rgba(255, 145, 77, 0.1);
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+/* Password input group styles */
+.password-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-group input {
+  width: 100%; /* Make input fill the container */
+  padding-right: 40px; /* Add padding for the icon */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #888;
+  font-size: 1.2rem; /* Adjust icon size */
+  user-select: none; /* Prevent text selection */
+}
+
+.password-toggle:hover {
+  color: #555;
+}
+
+/* Submit button */
+.submit-button {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #ff914d 0%, #ffaa33 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(90deg, #ff7b1a 0%, #ff9a00 100%);
+  transform: translateY(-1px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Message styling */
+.message {
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.message.success {
+  background: #e6f4ea;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.message.error {
+  background: #fce4e4;
+  color: #d32f2f;
+  border: 1px solid #ef9a9a;
+}
+
+/* Register links */
+.register-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+.register-link {
+  background: none;
+  border: none;
+  color: #ff914d;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link:hover {
+  color: #ff7b1a;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 24px;
+    max-width: 90vw;
+  }
+
+  .register-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .submit-button {
+    font-size: 0.95rem;
+  }
+
+  .register-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

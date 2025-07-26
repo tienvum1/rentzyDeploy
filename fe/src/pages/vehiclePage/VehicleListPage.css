@@ -1,0 +1,98 @@
+.vehicle-list-page-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.vehicle-list-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #222;
+}
+
+.vehicle-list-loading,
+.vehicle-list-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 40px;
+}
+
+.vehicle-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 16px;
+}
+
+/* Pagination Styles */
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 16px;
+}
+
+.pagination-info {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination-btn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #3ec6b8;
+}
+
+.pagination-btn.active {
+  background-color: #3ec6b8;
+  color: white;
+  border-color: #3ec6b8;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Header cho trang danh sách xe */
+.vehicle-list-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.vehicle-list-logo {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #3ec6b8;
+  letter-spacing: 1.5px;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+/* Footer cho trang danh sách xe */
+.vehicle-list-footer {
+  text-align: center;
+  margin-top: 28px;
+  color: #888;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}

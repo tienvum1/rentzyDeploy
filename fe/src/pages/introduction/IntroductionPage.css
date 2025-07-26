@@ -1,0 +1,267 @@
+.introduction-page {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.intro-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.intro-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.intro-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.intro-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.intro-content section {
+  margin-bottom: 60px;
+}
+
+.intro-content h2 {
+  font-size: 2.2rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-item {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.benefit-item h3 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  color: #4a5568;
+  margin: 0;
+}
+
+.demand-list {
+  list-style: none;
+  padding: 0;
+}
+
+.demand-list li {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin: 30px 0;
+}
+
+.pricing-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pricing-table th {
+  background: #667eea;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.pricing-table td {
+  padding: 15px 10px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pricing-table tr:nth-child(even) {
+  background: #f7fafc;
+}
+
+.pricing-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.pricing-note {
+  font-style: italic;
+  color: #718096;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.cta-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.districts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.district-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #e2e8f0;
+  transition: border-color 0.2s;
+}
+
+.district-item:hover {
+  border-color: #667eea;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.advantage-item {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.advantage-item h3 {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.advantage-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.advantage-item li {
+  color: #4a5568;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.advantage-item li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.conclusion-section {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.final-cta {
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-title {
+    font-size: 2rem;
+  }
+  
+  .intro-subtitle {
+    font-size: 1rem;
+  }
+  
+  .intro-content {
+    padding: 40px 15px;
+  }
+  
+  .intro-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .pricing-table {
+    overflow-x: auto;
+  }
+  
+  .pricing-table table {
+    min-width: 600px;
+  }
+  
+  .benefits-grid,
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+}

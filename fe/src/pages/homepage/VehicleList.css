@@ -1,0 +1,158 @@
+/* Reset mặc định */
+.vehicle-list-container {
+  margin-left: 68px;
+  margin-right: 68px;
+  padding-bottom: 50px; /* Add some padding at the bottom */
+}
+.vehicle-list, .vehicle-list * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.vehicle-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* More flexible grid */
+  gap: 32px;
+  margin: 32px 0;
+  justify-items: center; /* Center items in the grid */
+}
+
+/* Styles for individual VehicleCard */
+.vehicle-card {
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing parts of image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+    background-color: #fff; /* White background */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack content vertically */
+    width: 100%; /* Card takes full column width */
+    max-width: 350px; /* Max width for larger screens */
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.vehicle-card-image-container {
+    width: 100%;
+    height: 200px; /* Fixed height for image container */
+    overflow: hidden;
+}
+
+.vehicle-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    display: block; /* Remove extra space below image */
+}
+
+.vehicle-card-details {
+    padding: 15px;
+    flex-grow: 1; /* Allow details to take available space */
+}
+
+.vehicle-card-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Slightly larger font for name */
+    color: #333; /* Darker color for name */
+}
+
+.vehicle-card-details p {
+    margin-bottom: 5px; /* Smaller space between detail lines */
+    font-size: 0.95em; /* Standard font size */
+    color: #555; /* Slightly lighter color for details */
+}
+
+.vehicle-card-details p strong {
+    color: #333; /* Darker color for labels */
+}
+
+.vehicle-card-actions {
+    padding: 15px;
+    border-top: 1px solid #eee; /* Separator line */
+    background-color: #f8f8f8; /* Light background for actions */
+    display: flex;
+    justify-content: space-between; /* Space out buttons */
+    align-items: center;
+}
+
+.vehicle-card-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.vehicle-card-actions .btn-details {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.vehicle-card-actions .btn-details:hover {
+    background-color: #0056b3;
+}
+
+.vehicle-card-actions .btn-save {
+    background-color: #6c757d; /* Gray */
+    color: white;
+}
+
+.vehicle-card-actions .btn-save.saved {
+    background-color: #28a745; /* Green if saved */
+}
+
+.vehicle-card-actions .btn-save:hover {
+    background-color: #5a6268;
+}
+
+/* Placeholder for no image */
+.vehicle-card-no-image {
+    width: 100%;
+    height: 200px;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6c757d;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Responsive adjustments (adjust for card layout) */
+@media (max-width: 1100px) {
+  .vehicle-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .vehicle-list-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .vehicle-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  .vehicle-list-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .vehicle-card {
+      max-width: 95%; /* Allow cards to be slightly wider on small screens */
+  }
+  .vehicle-card-image-container {
+      height: 180px; /* Slightly smaller image height on small screens */
+  }
+} 

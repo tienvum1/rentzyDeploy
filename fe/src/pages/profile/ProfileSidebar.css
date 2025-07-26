@@ -1,0 +1,123 @@
+/* Add these styles to fe/src/pages/profile/Profile.css */
+
+/* Container for the main profile page layout */
+.profile-container {
+    display: flex; /* Use flexbox for sidebar and main content layout */
+    padding: 20px;
+    background-color: #f8f8f8; /* Light grey background */
+}
+
+/* Profile Sidebar as a component, not main layout */
+.sidebar-profile {
+    width: 100%;
+    max-width: 350px;
+    background: linear-gradient(135deg, #f5f5f5 70%, #ffffff 100%);
+    color: #000000;
+    padding: 18px 10px 10px 10px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+    display: flex;
+    flex-direction: column;
+    position: static;
+    height: auto;
+    z-index: 1;
+    margin-bottom: 18px;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #3b536a;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.08em;
+    color: #ff914d;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-menu li {
+    padding: 10px 10px;
+    margin-bottom: 2px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.22s, color 0.22s, box-shadow 0.18s, transform 0.15s;
+    display: flex;
+    align-items: center;
+    font-size: 1.08em;
+    font-weight: 500;
+    gap: 10px;
+    border: 1.2px solid transparent;
+}
+
+.sidebar-menu li:hover {
+    background: #34495e;
+    color: #ff914d;
+    transform: translateX(2px) scale(1.02);
+    box-shadow: 0 1px 4px rgba(255,145,77,0.08);
+}
+
+.sidebar-menu li.active {
+    background: linear-gradient(90deg, #ff914d 60%, #ffb86c 100%);
+    color: #fff;
+    font-weight: bold;
+    border: 1.2px solid #ff914d;
+    box-shadow: 0 2px 8px #ff914d33;
+    transform: scale(1.03);
+}
+
+.menu-icon {
+    margin-right: 7px;
+    font-size: 1.22em;
+    color: #ff914d;
+    transition: color 0.18s;
+}
+.sidebar-menu li.active .menu-icon {
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .sidebar-profile {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 1px 6px rgba(44,62,80,0.10);
+        margin-bottom: 12px;
+    }
+    .sidebar-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+    }
+    .sidebar-menu li {
+        flex: 1 1 110px;
+        min-width: 100px;
+        text-align: center;
+        justify-content: center;
+        font-size: 0.98em;
+        padding: 8px 4px;
+    }
+}
+
+/* Add any existing CSS for other sections below this */
+
+/* Example styles for the content area (adjust as needed) */
+.profile-content {
+    flex-grow: 1; /* Allow content to fill remaining space */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 

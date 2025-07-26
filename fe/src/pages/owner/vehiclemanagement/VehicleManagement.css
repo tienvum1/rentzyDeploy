@@ -1,0 +1,469 @@
+/* Variables for consistent colors and spacing */
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --success-color: #00ff3c; /* Green */
+    --danger-color: #dc3545; /* Red */
+    --warning-color: #ffc107; /* Yellow */
+    --info-color: #17a2b8; /* Cyan */
+    --light-color: #f8f9fa; /* Light background */
+    --dark-color: #343a40; /* Dark text */
+    --border-color: #dee2e6; /* General border color */
+    --border-radius: 8px; /* General border radius */
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 25px;
+}
+
+.vehicle-management-container {
+    padding: var(--spacing-lg);
+    margin-left: 250px; /* Adjust based on sidebar width */
+    background-color: var(--light-color);
+    min-height: 100vh;
+    color: var(--dark-color);
+}
+
+.vehicle-management-content {
+    padding: var(--spacing-md);
+    background-color: #ffffff; /* White background for content area */
+    border-radius: var(--border-radius); /* Rounded corners for content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+.vehicle-management-content h2 {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-lg);
+    font-size: 2em;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-color); /* Separator */
+    padding-bottom: var(--spacing-sm);
+}
+
+/* Messages (Success, Error, Info) */
+.message {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: var(--success-color);
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: var(--danger-color);
+    border: 1px solid #f5c6cb;
+}
+
+.message.info {
+    background-color: #d1ecf1;
+    color: var(--info-color);
+    border: 1px solid #bee5eb;
+}
+
+/* Add Buttons */
+.add-buttons {
+    margin-bottom: var(--spacing-lg);
+    display: flex; /* Arrange buttons horizontally */
+    gap: var(--spacing-sm); /* Space between buttons */
+}
+
+.add-buttons button {
+    padding: var(--spacing-md) var(--spacing-lg); /* Larger padding */
+    color: white;
+    border: none;
+    border-radius: var(--border-radius); /* Rounded corners */
+    cursor: pointer;
+    font-size: 1.1em; /* Slightly larger font */
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* Allow buttons to grow */
+    text-align: center;
+}
+
+.add-buttons button.btn-add-car {
+    background-color: var(--primary-color);
+}
+
+.add-buttons button.btn-add-motorbike {
+    background-color: var(--secondary-color);
+}
+
+.add-buttons button:hover {
+    opacity: 0.9;
+}
+
+/* Loading and Empty State Messages */
+.vehicle-management-content p {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.vehicle-management-content .error {
+     color: var(--danger-color); /* Style specific error message */
+     font-weight: 600;
+}
+
+/* Table Styling */
+.vehicle-table {
+    width: 100%;
+    border-collapse: collapse; /* Loại bỏ khoảng cách giữa các border */
+    margin-top: var(--spacing-md);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius); /* Áp dụng border-radius cho bảng */
+    overflow: hidden; /* Đảm bảo border-radius hoạt động với border-collapse */
+}
+
+.vehicle-table thead {
+    background-color: var(--primary-color); /* Màu nền cho header */
+    color: white;
+    text-align: left;
+}
+
+.vehicle-table th,
+.vehicle-table td {
+    padding: var(--spacing-sm) var(--spacing-md); /* Padding cho cell */
+    border: 1px solid var(--border-color); /* Border cho cell */
+}
+
+.vehicle-table th {
+    font-weight: 700;
+    text-transform: uppercase; /* Viết hoa tiêu đề cột */
+    font-size: 0.9em;
+}
+
+.vehicle-table tbody tr:nth-child(even) {
+    background-color: var(--light-color); /* Màu nền xen kẽ cho hàng */
+}
+
+.vehicle-table tbody tr:hover {
+    background-color: #e9ecef; /* Hiệu ứng hover cho hàng */
+}
+
+.vehicle-table td img {
+    display: block; /* Giúp canh giữa ảnh dễ hơn nếu cần */
+    width: 50px; /* Đặt chiều rộng cố định */
+    height: 50px; /* Đặt chiều cao cố định */
+    object-fit: cover; /* Đảm bảo ảnh bao phủ toàn bộ kích thước mà không bị méo */
+    border-radius: 4px;
+    
+}
+
+.vehicle-table td:last-child {
+    white-space: nowrap; /* Ngăn các nút xuống dòng */
+    text-align: center; /* Canh giữa nút hành động */
+}
+
+.vehicle-table td .action-buttons button {
+   padding: 5px 10px; /* Điều chỉnh padding cho nút trong bảng */
+   margin: 0 2px; /* Khoảng cách giữa các nút */
+   font-size: 0.85em; /* Kích thước font nhỏ hơn */
+}
+
+.vehicle-table td .edit-button {
+   background-color: var(--info-color);
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.2s ease;
+}
+
+.vehicle-table td .edit-button:hover {
+   background-color: #138496;
+}
+
+.vehicle-table td .delete-button {
+   background-color: var(--danger-color);
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.2s ease;
+}
+
+.vehicle-table td .delete-button:hover {
+   background-color: #c82333;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-md);
+}
+
+.vehicle-management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.search-container {
+    flex: 1;
+    min-width: 250px;
+}
+
+.sort-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.sort-select {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 0.9em;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.sort-order-btn {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sort-order-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.search-input {
+    flex: 1;
+    max-width: 400px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.total-vehicles {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    text-align: center;
+    min-width: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-badge.available {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-badge.blocked {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.approval-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    text-align: center;
+    min-width: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.approval-badge.approved {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.approval-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.approval-badge.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Rental Count */
+.rental-count {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.pagination-info {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    color: var(--dark-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9em;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: var(--light-color);
+    border-color: var(--primary-color);
+}
+
+.pagination button.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination .page-info {
+    margin: 0 var(--spacing-sm);
+    font-size: 0.9em;
+    color: var(--secondary-color);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-buttons button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 70px;
+}
+
+.detail-button {
+    background-color: #6c757d;
+    color: white;
+    border: 1px solid #6c757d;
+}
+
+.detail-button:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.edit-button {
+    background-color: #17a2b8;
+    color: white;
+    border: 1px solid #17a2b8;
+}
+
+.edit-button:hover {
+    background-color: #138496;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lock-button {
+    background-color: #ffc107;
+    color: #212529;
+    border: 1px solid #ffc107;
+}
+
+.lock-button:hover {
+    background-color: #e0a800;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.unlock-button {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #28a745;
+}
+
+.unlock-button:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+

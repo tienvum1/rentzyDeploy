@@ -1,0 +1,436 @@
+/* Modal Overlay */
+.rental-time-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal Container */
+.rental-time-modal,
+.rental-time-modal-wide {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 40px 32px 32px 32px;
+  min-width: 900px;
+  max-width: 900px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.rental-time-modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3ec6b8, #2ea89a, #1f8a7a);
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn:hover {
+  background: linear-gradient(135deg, #3ec6b8 0%, #2ea89a 100%);
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(62, 198, 184, 0.3);
+}
+
+/* Modal Title */
+.rental-time-modal h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #1e293b;
+  background: linear-gradient(135deg, #3ec6b8 0%, #2ea89a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+
+/* Row Container */
+.rental-time-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.rental-time-row::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 18px;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #e2e8f0 0%, transparent 100%);
+}
+
+.rental-time-row:last-child::after {
+  display: none;
+}
+
+/* Step Number */
+.rental-time-step {
+  min-width: 44px;
+  min-height: 44px;
+  background: linear-gradient(135deg, #3ec6b8 0%, #2ea89a 100%);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  box-shadow: 0 6px 20px rgba(62, 198, 184, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.rental-time-step::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #3ec6b8, #2ea89a, #1f8a7a);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.3;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.1;
+  }
+}
+
+/* Fields Group */
+.rental-time-fields-group {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Field Container */
+.rental-time-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Field Label */
+.rental-time-field label {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Input Box */
+.rental-time-inputbox {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px 20px;
+  gap: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.rental-time-inputbox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #3ec6b8 0%, #2ea89a 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.rental-time-field.active .rental-time-inputbox,
+.rental-time-field:focus-within .rental-time-inputbox {
+  border-color: #3ec6b8;
+  box-shadow: 0 8px 25px rgba(62, 198, 184, 0.15);
+  transform: translateY(-2px);
+}
+
+.rental-time-field.active .rental-time-inputbox::before,
+.rental-time-field:focus-within .rental-time-inputbox::before {
+  opacity: 0.05;
+}
+
+/* Icons */
+.rental-time-icon {
+  color: #3ec6b8;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(62, 198, 184, 0.2));
+}
+
+.rental-time-field.active .rental-time-icon,
+.rental-time-field:focus-within .rental-time-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(62, 198, 184, 0.3));
+}
+
+.rental-time-moon {
+  color: #f59e0b;
+  font-size: 1.4rem;
+  margin-left: 8px;
+  filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
+  animation: moonGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes moonGlow {
+  from { filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3)); }
+  to { filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.5)); }
+}
+
+/* Input and Select Styles */
+.rental-time-inputbox input[type='date'],
+.rental-time-inputbox select {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 700;
+  outline: none;
+  width: 100%;
+  color: #1e293b;
+  padding: 0;
+  letter-spacing: 0.3px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rental-time-inputbox input[type='date']::-webkit-calendar-picker-indicator,
+.rental-time-inputbox select {
+  cursor: pointer;
+}
+
+.rental-time-inputbox input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(140deg);
+  transform: scale(1.2);
+}
+
+/* Summary Section */
+.rental-time-summary {
+  margin: 32px 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: left;
+  letter-spacing: 0.2px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(62, 198, 184, 0.1) 0%, rgba(46, 168, 154, 0.1) 100%);
+  border-radius: 12px;
+  border-left: 4px solid #3ec6b8;
+}
+
+/* Confirm Button */
+.confirm-btn {
+  background: linear-gradient(135deg, #3ec6b8 0%, #2ea89a 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding: 18px 56px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  margin: 32px 0 0 auto;
+  display: block;
+  box-shadow: 0 8px 25px rgba(62, 198, 184, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.confirm-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.confirm-btn:hover::before {
+  left: 100%;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(135deg, #2ea89a 0%, #1f8a7a 100%);
+  box-shadow: 0 12px 35px rgba(62, 198, 184, 0.4);
+  transform: translateY(-2px);
+}
+
+.confirm-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 20px rgba(62, 198, 184, 0.3);
+}
+
+/* Warning and Night Classes */
+.rental-time-modal .warning {
+  color: #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 12px 0 0 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 4px solid #f59e0b;
+  font-weight: 600;
+}
+
+.rental-time-modal .night {
+  color: #ef4444;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 12px 0 0 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 4px solid #ef4444;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .rental-time-modal,
+  .rental-time-modal-wide {
+    min-width: 95vw;
+    max-width: 95vw;
+    padding: 24px 20px 20px 20px;
+    margin: 20px;
+  }
+  
+  .rental-time-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .rental-time-fields-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .rental-time-inputbox {
+    padding: 14px 16px;
+  }
+  
+  .rental-time-step {
+    align-self: center;
+    margin-top: 0;
+  }
+  
+  .confirm-btn {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .rental-time-modal,
+  .rental-time-modal-wide {
+    min-width: 98vw;
+    max-width: 98vw;
+    padding: 20px 16px 16px 16px;
+    margin: 10px;
+    border-radius: 20px;
+  }
+  
+  .rental-time-modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+  
+  .rental-time-inputbox {
+    padding: 12px 14px;
+    font-size: 1rem;
+  }
+  
+  .rental-time-icon {
+    font-size: 1.2rem;
+  }
+  
+  .confirm-btn {
+    padding: 16px 0;
+    font-size: 1rem;
+  }
+}

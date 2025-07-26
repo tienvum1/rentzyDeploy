@@ -1,0 +1,202 @@
+.consign-main-bg {
+    background: #f8f8f8;
+    padding: 40px 0 0 0;
+    min-height: 100vh;
+  }
+  .consign-main-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px #0001;
+    padding: 32px;
+  }
+  @media (max-width: 900px) {
+    .consign-main-container {
+      padding: 18px 8px;
+    }
+  }
+  .consign-form-left {
+    width: 100%;
+  }
+  .consign-title {
+    color: #4ec9b4;
+    font-size: 1.8rem;
+
+
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .brand-highlight {
+    color: #ff914d;
+  }
+  .consign-desc {
+    color: #222;
+
+    font-size: 1rem;
+    margin-bottom: 24px;
+
+  }
+  .consign-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  .consign-form input:not([type="file"]),
+  .consign-form select {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    font-size: 1rem;
+    margin-bottom: 0;
+    outline: none;
+    background-color: transparent;
+  }
+  .form-group input[type="file"] {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    font-size: 1rem;
+    margin-bottom: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .consign-form input:not([type="file"]):focus,
+   .consign-form input[type="file"]:focus,
+  .consign-form select:focus {
+    border-bottom-color: #4ec9b4;
+  }
+  .consign-form input::placeholder {
+    color: #aaa;
+    font-size: 1rem;
+
+  }
+  .income-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0fdf4;
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin: 8px 0 0 0;
+    font-size: 1.1rem;
+  }
+  .income-value {
+    color: #10b981;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .btn-submit {
+    width: 100%;
+    background: #4ec9b4;
+    color: #fff;
+    border: none;
+
+    padding: 14px 0;
+
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: background 0.2s;
+    letter-spacing: 1px;
+
+  }
+  .btn-submit:hover {
+    background: #38b29a;
+  }
+  .btn-submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .form-error {
+    color: #e74c3c;
+    background: #fff0f0;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+
+  }
+  .form-success {
+    color: #10b981;
+    background: #f0fdf4;
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+
+    text-align: center;
+  }
+  .consign-navbar {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 12px #0001;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .consign-navbar__logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ff914d;
+    letter-spacing: 1px;
+  }
+  .consign-navbar__brand {
+    color: #ff914d;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+  .consign-navbar__links {
+    display: flex;
+    gap: 32px;
+  }
+  .consign-navbar__link {
+    color: #222;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+  }
+  .consign-navbar__link:hover {
+    color: #4ec9b4;
+    border-bottom: 2px solid #4ec9b4;
+  }
+  @media (max-width: 700px) {
+    .consign-navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 0 12px;
+      gap: 8px;
+    }
+    .consign-navbar__links {
+      gap: 16px;
+    }
+  }

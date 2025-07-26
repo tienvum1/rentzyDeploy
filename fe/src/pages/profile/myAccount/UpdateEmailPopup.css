@@ -1,0 +1,123 @@
+/* Styles for Update Email Popup */
+
+.popup-overlay {
+    position: fixed; /* Fixed position to cover the whole viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.popup-content {
+    background-color: #fff; /* White background */
+    padding: 30px; /* Padding around content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow */
+    position: relative; /* Needed for absolute positioning of close button */
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Max width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between elements */
+}
+
+.popup-close {
+    position: absolute; /* Position relative to popup-content */
+    top: 10px;
+    right: 10px;
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 1.5em; /* Larger icon */
+    cursor: pointer;
+    color: #888; /* Gray color */
+    padding: 5px; /* Clickable area */
+    transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+    color: #555; /* Darker color on hover */
+}
+
+.popup-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px; /* Space below title */
+    text-align: center; /* Center title */
+    color: #333; /* Darker text color for title */
+    font-size: 1.5em;
+}
+
+.popup-input {
+    padding: 12px 15px; /* Padding inside input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners for input */
+    font-size: 1em;
+    width: 100%; /* Full width minus padding */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.popup-update-btn {
+    background-color: #81c784; /* Light green background, similar to image */
+    color: white; /* White text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 12px 20px; /* Padding inside button */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%; /* Full width button */
+}
+
+.popup-update-btn:hover {
+    background-color: #66bb6a; /* Darker green on hover */
+}
+
+.popup-update-btn:disabled {
+    background-color: #a5d6a7; /* Lighter green when disabled */
+    cursor: not-allowed;
+}
+
+.popup-resend-btn { /* Style for the resend OTP button */
+    background: none; /* No background */
+    border: none; /* No border */
+    color: #007bff; /* Blue color */
+    font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: underline; /* Underline text */
+    margin-top: 5px; /* Space above button */
+}
+
+.popup-resend-btn:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.popup-resend-btn:disabled {
+    color: #ccc; /* Gray out when disabled */
+    cursor: not-allowed;
+    text-decoration: none; /* No underline when disabled */
+}
+
+.popup-message {
+    margin-top: -10px; /* Adjust spacing */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.popup-message.error {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb; /* Red border */
+}
+
+.popup-message.success {
+     background-color: #d4edda; /* Light green background */
+     color: #155724; /* Dark green text */
+     border: 1px solid #c3e6cb; /* Green border */
+ } 

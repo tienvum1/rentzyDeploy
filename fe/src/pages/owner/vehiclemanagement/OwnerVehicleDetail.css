@@ -1,0 +1,268 @@
+/* Layout tổng thể */
+.owner-vehicle-detail-layout {
+  min-height: 100vh;
+  background: #f7f7f9;
+}
+
+.owner-vehicle-detail-main {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.sidebar-owner-wrap {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid #ececec;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.owner-vehicle-detail-content {
+  flex: 1;
+  padding: 32px 40px;
+  min-width: 0;
+}
+
+.owner-vehicle-detail-card {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.owner-vehicle-detail-images {
+  min-width: 280px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.gallery-images {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.owner-vehicle-detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.05rem;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  color: #1a202c;
+}
+
+.btn-back {
+  margin-top: 16px;
+  padding: 8px 24px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-back:hover {
+  background: #125ea2;
+}
+
+.owner-vehicle-detail-loading,
+.owner-vehicle-detail-error,
+.owner-vehicle-detail-notfound {
+  padding: 48px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.with-sidebar-margin {
+  margin-left: 250px;
+}
+
+.owner-vehicle-detail-card.improved {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+
+.owner-vehicle-detail-images .main-image,
+.owner-vehicle-detail-images .gallery-image {
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.owner-vehicle-detail-images .main-image:hover,
+.owner-vehicle-detail-images .gallery-image:hover {
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.18);
+  transform: scale(1.04);
+  z-index: 2;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+.modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  background: #fff;
+}
+
+.owner-vehicle-detail-info.improved {
+  flex: 1;
+  min-width: 260px;
+  max-width: 500px;
+}
+.vehicle-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.08rem;
+}
+.vehicle-info-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+.vehicle-info-table td:first-child {
+  font-weight: 500;
+  color: #1976d2;
+  width: 160px;
+}
+.vehicle-info-table tr:last-child td {
+  border-bottom: none;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.btn-remove-image {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background 0.2s;
+}
+.btn-remove-image:hover {
+  background: #b71c1c;
+}
+
+.form-actions.equal-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+}
+.form-actions.equal-buttons .btn-submit,
+.form-actions.equal-buttons .btn-cancel {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px 0;
+  font-size: 1.08rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.form-actions.equal-buttons .btn-submit {
+  background: #1976d2;
+  color: #fff;
+}
+.form-actions.equal-buttons .btn-submit:hover {
+  background: #125ea2;
+}
+.form-actions.equal-buttons .btn-cancel {
+  background: #eee;
+  color: #333;
+}
+.form-actions.equal-buttons .btn-cancel:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 900px) {
+  .owner-vehicle-detail-main {
+    flex-direction: column;
+    padding: 0;
+  }
+  .sidebar-owner-wrap {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    min-height: unset;
+    border-right: none;
+    border-bottom: 1px solid #ececec;
+  }
+  .owner-vehicle-detail-content {
+    margin-left: 0;
+    padding: 24px 8px;
+  }
+  .owner-vehicle-detail-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .owner-vehicle-detail-images {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .with-sidebar-margin {
+    margin-left: 0;
+  }
+  .owner-vehicle-detail-card.improved {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .owner-vehicle-detail-info.improved {
+    max-width: 100%;
+  }
+} 

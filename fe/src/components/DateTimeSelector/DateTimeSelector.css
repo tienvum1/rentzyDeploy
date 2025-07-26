@@ -1,0 +1,327 @@
+.date-time-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.date-time-modal {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    width: 85%;
+    max-width: 900px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.modal-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.modal-header button:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.date-time-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: stretch;
+}
+
+.pickup-section,
+.return-section {
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.time-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+    min-height: 0;
+    justify-content: flex-start;
+}
+
+.pickup-section h4,
+.return-section h4 {
+    margin: 0;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    text-align: center;
+    align-self: flex-start;
+    margin-bottom: auto;
+}
+
+.date-picker-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    height: 36px;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
+    gap: 6px;
+    align-content: start;
+}
+
+.time-slot {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.7rem;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.time-slot:hover:not(:disabled) {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+.time-slot.selected {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+.time-slot.time-slot-booked {
+    background: #f8f9fa;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
+
+.no-available-hours {
+    text-align: center;
+    color: #666;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin: 0;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.custom-time-picker {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.confirm-button,
+.cancel-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.confirm-button {
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+.confirm-button:hover {
+    background: #0056b3;
+}
+
+.cancel-button {
+    background: white;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.cancel-button:hover {
+    background: #f8f9fa;
+    border-color: #999;
+}
+
+/* React DatePicker custom styles */
+.react-datepicker {
+    font-family: inherit;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-size: 0.9rem;
+}
+
+.react-datepicker__header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+}
+
+.react-datepicker__day {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin: 2px;
+    font-size: 0.9rem;
+
+}
+
+.react-datepicker__day--selected {
+    background-color: #007bff !important;
+}
+
+.react-datepicker__day--highlighted-custom {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.react-datepicker__day--disabled {
+    color: #ccc !important;
+    cursor: not-allowed;
+}
+
+/* React TimePicker custom styles */
+.react-time-picker__wrapper {
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+}
+
+.react-time-picker__inputGroup {
+    padding: 6px !important;
+}
+
+.react-time-picker__inputGroup__input {
+    padding: 2px !important;
+    font-size: 0.9rem;
+}
+
+/* Đảm bảo các phần tử có kích thước giống nhau */
+.pickup-section > *,
+.return-section > * {
+    box-sizing: border-box;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .date-time-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .date-time-modal {
+        width: 92%;
+        padding: 12px;
+    }
+
+    .pickup-section,
+    .return-section {
+        height: auto;
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .date-time-modal {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .pickup-section,
+    .return-section {
+        height: auto;
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+    }
+
+    .modal-header h3 {
+        font-size: 1rem;
+    }
+
+    .confirm-button,
+    .cancel-button {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .time-slot {
+        height: 28px;
+        font-size: 0.8rem;
+    }
+}
+
+.validation-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    text-align: center;
+}

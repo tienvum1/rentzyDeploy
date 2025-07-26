@@ -1,0 +1,130 @@
+.vehicle-card-pro {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.18s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+    min-width: 270px;
+    max-width: 350px;
+    margin: 0 auto;
+    outline: none;
+    border: 1.5px solid #f2f2f2;
+}
+.vehicle-card-pro:hover, .vehicle-card-pro:focus {
+    box-shadow: 0 8px 36px rgba(0,0,0,0.18);
+    transform: translateY(-6px) scale(1.025);
+    border-color: #e0e0e0;
+}
+.vehicle-card-pro-img-wrap {
+  position: relative;
+  width: 100%;
+    aspect-ratio: 16/9;
+    background: #f7f7f7;
+  overflow: hidden;
+    border-bottom: 1.5px solid #f2f2f2;
+}
+.vehicle-card-pro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+    border-radius: 0 0 18px 18px;
+    transition: transform 0.3s;
+}
+.vehicle-card-pro:hover .vehicle-card-pro-img {
+    transform: scale(1.06);
+}
+.vehicle-card-pro-discount-badge {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    background: #ff4d4f;
+    color: #fff;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(255,77,79,0.10);
+    z-index: 2;
+}
+.vehicle-card-pro-info {
+    padding: 20px 18px 16px 18px;
+  display: flex;
+    flex-direction: column;
+  gap: 10px;
+}
+.vehicle-card-pro-title-row {
+  display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+.vehicle-card-pro-brand {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #1a7f37;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.vehicle-card-pro-model {
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: #222;
+    margin-left: 2px;
+    letter-spacing: 0.2px;
+}
+.vehicle-card-pro-location {
+  display: flex;
+  align-items: center;
+    gap: 7px;
+    color: #888;
+    font-size: 1.01rem;
+    margin: 2px 0 0 0;
+}
+.vehicle-card-pro-specs {
+  display: flex;
+    gap: 18px;
+    margin: 8px 0 2px 0;
+    font-size: 1.01rem;
+    color: #555;
+}
+.vehicle-card-pro-specs > div {
+  display: flex;
+  align-items: center;
+    gap: 5px;
+}
+.vehicle-card-pro-price-row {
+    margin-top: 10px;
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: #e67e22;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+.vehicle-card-pro-price-unit {
+    font-size: 0.98rem;
+    color: #888;
+    font-weight: 400;
+    margin-left: 2px;
+}
+@media (max-width: 600px) {
+    .vehicle-card-pro {
+        min-width: 92vw;
+        max-width: 99vw;
+}
+    .vehicle-card-pro-info {
+        padding: 13px 7px 10px 7px;
+}
+    .vehicle-card-pro-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    .vehicle-card-pro-brand, .vehicle-card-pro-model {
+        font-size: 1rem;
+    }
+}

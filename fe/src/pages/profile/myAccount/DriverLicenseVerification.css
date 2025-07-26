@@ -1,0 +1,132 @@
+.dlx-container {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width :100%;
+    max-width: unset;
+    margin: 20px auto;
+}
+
+.dlx-edit-btn {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dlx-edit-btn:hover {
+    background-color: #f0f0f0;
+}
+
+
+.dlx-notice {
+    background-color: #fffbe6;
+    border: 1px solid #ffe58f;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.dlx-form-container {
+    display: flex;
+    gap: 24px;
+}
+
+.dlx-image-section, .dlx-info-section {
+    flex: 1;
+}
+
+.dlx-image-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.dlx-image-preview img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;           /* Giữ đúng tỉ lệ ảnh */
+    object-fit: contain;    /* Không crop ảnh, luôn hiển thị đầy đủ */
+    border-radius: 12px;    /* Bo góc nhẹ cho đẹp */
+    box-shadow: 0 2px 12px 0 rgba(60,72,88,0.08);
+}
+
+.dlx-form-field {
+    margin-bottom: 16px;
+}
+
+.dlx-form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.dlx-form-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dlx-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.dlx-cancel-btn, .dlx-save-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dlx-cancel-btn {
+    background-color: #f0f0f0;
+}
+
+.dlx-save-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.dlx__badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dlx__badge.verified {
+    background-color: #e6f7f0;
+    color: #28a745;
+}
+
+.dlx__badge.pending {
+    background-color: #fffbe6;
+    color: #faad14;
+}
+
+.dlx__badge.rejected {
+    background-color: #fff1f0;
+    color: #f5222d;
+}
+
+.dlx-faq {
+    margin-top: 20px;
+    text-align: center;
+}
+.dlx-faq a{
+    color: #007bff;
+    text-decoration: none;
+}
+  

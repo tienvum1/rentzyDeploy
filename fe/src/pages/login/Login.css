@@ -1,0 +1,218 @@
+/* General container styling */
+.login-container {
+  min-height: 80vh;
+  background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card styling for the login form */
+.login-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Heading */
+.login-card h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Form group styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #ff914d;
+  box-shadow: 0 0 0 3px rgba(255, 145, 77, 0.1);
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+/* Password input group styles (similar to Register page) */
+.password-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-group input {
+   width: 100%; /* Make input fill the container */
+  padding-right: 40px; /* Add padding for the icon */
+  box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #888;
+  font-size: 1.2rem; /* Adjust icon size */
+  user-select: none; /* Prevent text selection */
+}
+
+.password-toggle:hover {
+  color: #555;
+}
+
+/* Submit button */
+.submit-button {
+  background: linear-gradient(90deg, #ff914d 0%, #ffaa33 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(90deg, #ff7b1a 0%, #ff9a00 100%);
+  transform: translateY(-1px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Message styling */
+.message {
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.message.success {
+  background: #e6f4ea;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.message.error {
+  background: #fce4e4;
+  color: #d32f2f;
+  border: 1px solid #ef9a9a;
+}
+
+/* Login links */
+.login-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-link {
+  background: none;
+  border: none;
+  color: #ff914d;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #ff7b1a;
+  text-decoration: underline;
+}
+
+/* Divider */
+.or-divider {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  position: relative;
+  margin: 20px 0;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+/* Google login button */
+.google-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
+}
+
+.google-login-button:hover {
+  background: #f5f6f5;
+  border-color: #ccc;
+  transform: translateY(-1px);
+}
+
+.google-login-button:active {
+  transform: translateY(0);
+}
+
+.google-icon svg {
+  width: 20px;
+  height: 20px;
+}
+

@@ -1,0 +1,83 @@
+/* fe/src/components/SidebarOwner/SidebarOwner.css */
+
+.sidebar {
+    width: 250px; /* Chiều rộng của sidebar */
+    background-color: #2c3e50; /* Màu nền tối */
+    color: #ecf0f1; /* Màu chữ sáng */
+    padding: 20px 0; /* Padding trên dưới */
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo cột */
+    height: 100vh; /* Chiều cao đầy đủ của viewport */
+    position: fixed; /* Giữ sidebar cố định */
+    left: 0;
+    top: 0;
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ */
+}
+
+.sidebar-header {
+    font-size: 24px; /* Kích thước chữ tiêu đề */
+    font-weight: bold; /* Chữ đậm */
+    text-align: center; /* Căn giữa tiêu đề */
+    margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
+    color: #3498db; /* Màu nhấn cho tiêu đề */
+}
+
+.sidebar-nav ul {
+    list-style: none; /* Bỏ dấu chấm đầu dòng */
+    padding: 0; /* Bỏ padding mặc định của ul */
+    margin: 0; /* Bỏ margin mặc định của ul */
+}
+
+.sidebar-nav li {
+    margin-bottom: 10px; /* Khoảng cách giữa các item menu */
+}
+
+.nav-link {
+    display: flex; /* Sử dụng flexbox để căn chỉnh icon và text */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 20px; /* Padding cho mỗi link */
+    color: #ecf0f1; /* Màu chữ mặc định */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-size: 16px; /* Kích thước chữ */
+    transition: background-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+.nav-link:hover {
+    background-color: #34495e; /* Màu nền khi hover */
+    color: #ecf0f1; /* Giữ nguyên màu chữ hoặc đổi màu khác */
+}
+
+.nav-link svg { /* Style cho icon */
+    margin-right: 10px; /* Khoảng cách giữa icon và text */
+    font-size: 20px; /* Kích thước icon */
+}
+
+.nav-link.active {
+    background-color: #3498db; /* Màu nền cho link active */
+    color: #ffffff; /* Màu chữ cho link active */
+    font-weight: bold; /* Chữ đậm cho link active */
+    border-left: 5px solid #ffffff; /* Viền trái cho link active */
+    padding-left: 15px; /* Điều chỉnh padding do có viền trái */
+}
+
+.divider {
+    height: 1px; /* Chiều cao của đường phân cách */
+    background-color: #34495e; /* Màu của đường phân cách */
+    margin: 15px 20px; /* Margin trên dưới và hai bên cho đường phân cách */
+}
+
+/* Style cho phần main content để không bị che bởi sidebar cố định */
+/* Bạn cần đảm bảo rằng main content có đủ margin trái */
+/* Class 'dashboard-container' và 'main-content' có thể nằm trong OwnerDashboard.css */
+/* Ví dụ trong OwnerDashboard.css: */
+/*
+.dashboard-container {
+    display: flex;
+}
+
+.main-content {
+    margin-left: 250px; // Chiều rộng của sidebar
+    padding: 20px;
+    flex-grow: 1; // Cho phép main content chiếm hết không gian còn lại
+}*/

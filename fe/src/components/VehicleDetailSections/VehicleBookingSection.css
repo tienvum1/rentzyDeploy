@@ -1,0 +1,494 @@
+.vehicle-booking-section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Phần giá và thời gian */
+.pricing-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-section h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.price-per-day {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2ecc71;
+}
+
+.unit {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.select-datetime-button {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.select-datetime-button:hover {
+  background: #e9ecef;
+}
+
+.selected-datetime {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.datetime-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.datetime-item .label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.datetime-item .value {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Phần địa điểm nhận xe */
+.pickup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pickup-section h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.pickup-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pickup-box {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pickup-box:hover {
+  border-color: #2ecc71;
+}
+
+.pickup-box.selected {
+  border-color: #2ecc71;
+  background: #f0fff4;
+}
+
+.pickup-box input[type="checkbox"] {
+  margin-top: 2px;
+}
+
+.pickup-box-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pickup-box-content b {
+  font-size: 1rem;
+  color: #333;
+}
+
+.pickup-location-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Targeting the 📍 icon to ensure it doesn't shrink */
+.pickup-location-label span[role="img"] {
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+}
+
+.address-input-wrapper {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.pickup-address-input {
+  flex: 1;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.9rem;
+  min-width: 0;
+}
+
+.pickup-address-input:focus {
+  outline: none;
+  border-color: #2ecc71;
+}
+
+.placeholder {
+  color: #bbb;
+  flex: 1;
+  min-width: 0;
+}
+
+.pickup-fee-info {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.delivery-note {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 8px;
+}
+
+.delivery-note p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #856404;
+}
+
+/* Phần tổng chi phí */
+.cost-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cost-summary h3 {
+  margin-top:12px;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.cost-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cost-item:last-child {
+  border-bottom: none;
+}
+
+.cost-item.total {
+  font-weight: 600;
+  color: #2ecc71;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.promo-description {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+.discount-amount {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.promo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.apply-promo-btn {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.apply-promo-btn:hover {
+  background: #e9ecef;
+}
+
+.remove-promo-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 4px;
+}
+
+.remove-promo-btn:hover {
+  text-decoration: underline;
+}
+
+/* Modal mã khuyến mãi */
+.promo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.promo-modal {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.promo-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-modal-header b {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.promo-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.promo-input {
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.promo-input:focus {
+  outline: none;
+  border-color: #2ecc71;
+}
+
+.promo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.promo-item {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.promo-item-left {
+  display: flex;
+  align-items: center;
+}
+
+.promo-icon {
+  font-size: 1.5rem;
+}
+
+.promo-item-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.promo-code {
+  font-weight: 600;
+  color: #2ecc71;
+}
+
+.promo-title {
+  font-weight: 500;
+  color: #333;
+}
+
+.promo-desc,
+.promo-time,
+.promo-valid,
+.promo-note,
+.promo-left {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.promo-item-action {
+  display: flex;
+  align-items: center;
+}
+
+.promo-apply-btn {
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.promo-apply-btn:hover {
+  background: #27ae60;
+}
+
+.no-promo-found {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+}
+
+/* Nút đặt xe và điều khoản */
+.booking-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.book-now-button {
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.book-now-button:hover {
+  background: #27ae60;
+}
+
+.book-now-button:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.terms-agreement {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vehicle-booking-section {
+    padding: 16px;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .promo-modal {
+    width: 95%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vehicle-booking-section {
+    padding: 12px;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .promo-item {
+    flex-direction: column;
+  }
+
+  .promo-item-action {
+    margin-top: 8px;
+  }
+
+  .promo-apply-btn {
+    width: 100%;
+  }
+}

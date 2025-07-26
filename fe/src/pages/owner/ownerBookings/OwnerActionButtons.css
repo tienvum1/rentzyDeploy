@@ -1,0 +1,60 @@
+/* OwnerActionButtons.css: Modern action button styles for booking management */
+
+.owner-booking-action-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.owner-booking-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  text-decoration: none;
+  min-width: 110px;
+  justify-content: center;
+}
+
+.owner-booking-action-btn.view {
+  background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #1976d2;
+  border: 1.5px solid #1976d2;
+}
+.owner-booking-action-btn.view:hover {
+  background: #1976d2;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+}
+
+.owner-booking-action-btn.contract {
+  background: linear-gradient(90deg, #1976d2 0%, #1565c0 100%);
+  color: #fff;
+  border: 1.5px solid #1976d2;
+}
+.owner-booking-action-btn.contract:hover {
+  background: #0d47a1;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+}
+
+@media (max-width: 900px) {
+  .owner-booking-action-group {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .owner-booking-action-btn {
+    min-width: 90px;
+    font-size: 0.97rem;
+    padding: 6px 10px;
+  }
+} 

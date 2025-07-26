@@ -1,0 +1,60 @@
+/* Layout dùng chung cho các trang profile */
+.profile-layout-row {
+    display: flex;
+    min-height: 100vh;
+    background: #f7f7f9;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .profile-sidebar-wrap {
+    width: 350px;
+    min-width: 350px;
+    max-width: 350px;
+    background: #fff;
+    border-right: 1px solid #ececec;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  
+  .profile-main-content {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+    max-width: none;
+    flex-direction: column;
+    padding: 48px 32px 32px 32px;
+    min-height: 100vh;
+    background: #f7f7f9;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+  
+  /* Responsive: sidebar lên trên, main content xuống dưới khi màn nhỏ */
+  @media (max-width: 900px) {
+    .profile-layout-row {
+      flex-direction: column;
+    }
+    .profile-sidebar-wrap {
+      width: 100%;
+      min-width: unset;
+      max-width: unset;
+      min-height: unset;
+      border-right: none;
+      border-bottom: 1px solid #ececec;
+      position: static;
+    }
+    .profile-main-content {
+      padding: 24px 8px 8px 8px;
+      min-height: unset;
+      min-width: 0;
+      width: 100%;
+    }
+  }

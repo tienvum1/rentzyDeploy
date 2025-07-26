@@ -1,0 +1,339 @@
+.owner-review-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+.owner-review-content {
+  flex: 1;
+  padding: 36px 32px 32px 32px;
+  max-width: 1200px;
+  margin-left: 250px;
+}
+.owner-review-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1976d2;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+.owner-review-loading, .owner-review-error, .owner-review-empty {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  margin-top: 32px;
+}
+.owner-review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.owner-review-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+  padding: 22px 24px 16px 24px;
+  border: 1.5px solid #e3eaff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.owner-review-card:hover {
+  box-shadow: 0 6px 24px #1976d233;
+  border-color: #1976d2;
+}
+.owner-review-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 6px;
+}
+.owner-review-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e3eaff;
+  background: #f3f4f6;
+}
+.owner-review-name {
+  font-weight: 700;
+  color: #1976d2;
+  font-size: 1.08rem;
+}
+.owner-review-vehicle {
+  color: #444;
+  font-size: 1.01rem;
+  margin-top: 2px;
+}
+.owner-review-rating {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.owner-review-content-text {
+  font-size: 1.08rem;
+  color: #222;
+  margin-bottom: 2px;
+  margin-left: 4px;
+}
+.owner-review-date {
+  color: #888;
+  font-size: 0.98rem;
+  text-align: right;
+  margin-top: 2px;
+}
+.owner-review-booking-info {
+  font-size: 0.98rem;
+  color: #555;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  letter-spacing: 0.1px;
+}
+.owner-review-detail-btn {
+  margin-top: 8px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px #e3eaff44;
+  outline: none;
+}
+.owner-review-detail-btn:hover {
+  background: #1251a3;
+  box-shadow: 0 2px 8px #1976d233;
+}
+.owner-review-card.redesigned {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #fafdff 60%, #f0f6ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #1976d21a;
+  border: 1.5px solid #e3eaff;
+  padding: 0;
+  overflow: hidden;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.owner-review-card-main {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 28px 12px 28px;
+  gap: 32px;
+}
+.owner-review-card-left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.owner-review-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+.owner-review-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 2px;
+}
+.owner-review-card-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  justify-content: center;
+  min-width: 220px;
+}
+.owner-review-vehicle {
+  font-size: 1.08rem;
+  color: #1976d2;
+  font-weight: 600;
+  margin-bottom: 2px;
+  align-self: flex-end;
+}
+.owner-review-booking-info {
+  font-size: 0.98rem;
+  color: #444;
+  background: #eaf2fb;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-end;
+  width: 100%;
+}
+.owner-review-detail-btn {
+  margin-top: 6px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px #e3eaff44;
+  outline: none;
+}
+.owner-review-detail-btn:hover {
+  background: #1251a3;
+  box-shadow: 0 2px 8px #1976d233;
+}
+.owner-review-date-row {
+  background: #f3f7fa;
+  padding: 8px 28px 8px 28px;
+  border-top: 1px solid #e3eaff;
+  text-align: right;
+}
+.owner-review-date {
+  color: #888;
+  font-size: 0.98rem;
+}
+.owner-review-card.clean {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+  border: 1.5px solid #e3eaff;
+  padding: 0;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.owner-review-card.clean:hover {
+  box-shadow: 0 6px 24px #1976d233;
+  border-color: #1976d2;
+}
+.owner-review-top-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 28px 0 28px;
+  justify-content: space-between;
+}
+.owner-review-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e3eaff;
+  background: #f3f4f6;
+}
+.owner-review-name-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+.owner-review-name {
+  font-weight: 700;
+  color: #1976d2;
+  font-size: 1.08rem;
+}
+.owner-review-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.owner-review-date-top {
+  color: #888;
+  font-size: 0.98rem;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.main-content {
+  font-size: 1.12rem;
+  color: #222;
+  margin: 12px 28px 0 28px;
+  padding-bottom: 4px;
+  line-height: 1.6;
+}
+.owner-review-divider {
+  height: 1px;
+  background: #e3eaff;
+  margin: 18px 0 0 0;
+  width: 100%;
+}
+.owner-review-booking-section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px 28px 18px 28px;
+  background: #f8fafc;
+  border-top: 1px solid #e3eaff;
+  flex-wrap: wrap;
+}
+.owner-review-booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+  font-size: 1.01rem;
+  color: #444;
+}
+.owner-review-booking-grid .icon {
+  margin-right: 4px;
+  font-size: 1.08em;
+}
+.owner-review-detail-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px #e3eaff44;
+  outline: none;
+  margin-left: 24px;
+  margin-top: 8px;
+  align-self: flex-end;
+}
+.owner-review-detail-btn:hover {
+  background: #1251a3;
+  box-shadow: 0 2px 8px #1976d233;
+}
+@media (max-width: 900px) {
+  .owner-review-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 8px 0 8px;
+  }
+  .main-content {
+    margin: 8px 8px 0 8px;
+    font-size: 1rem;
+  }
+  .owner-review-booking-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 8px 12px 8px;
+  }
+  .owner-review-booking-grid {
+    grid-template-columns: 1fr;
+    gap: 6px 0;
+  }
+  .owner-review-detail-btn {
+    margin-left: 0;
+    margin-top: 12px;
+    width: 100%;
+  }
+} 

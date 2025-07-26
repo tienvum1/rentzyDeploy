@@ -1,0 +1,148 @@
+.admin-dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.admin-dashboard-content {
+  flex: 1;
+  padding: 0;
+  background: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-page-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 32px 24px 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  margin-top: 32px;
+}
+
+.notification-header-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.notification-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin: 0;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notification-card {
+  background: #f0f4fa;
+  border-radius: 10px;
+  padding: 18px 28px;
+  box-shadow: 0 1px 4px rgba(25, 118, 210, 0.07);
+  display: flex;
+  align-items: center;
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+}
+.notification-card.unread {
+  background: #e3f0ff;
+  border-color: #1976d2;
+}
+.notification-card:hover {
+  background: #eaf3fb;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.13);
+}
+
+.compact-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.notification-badge {
+  font-size: 1.3rem;
+  margin-right: 8px;
+  color: #1976d2;
+  font-weight: bold;
+}
+.notification-badge.unread {
+  color: #d32f2f;
+}
+.notification-badge.read {
+  color: #bdbdbd;
+}
+
+.compact-title-text {
+  font-weight: 600;
+  color: #222;
+  font-size: 1.1rem;
+  margin-right: 8px;
+}
+.compact-message {
+  color: #444;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 120px;
+}
+.compact-link {
+  color: #1976d2;
+  font-size: 0.98rem;
+  background: #e3f2fd;
+  border-radius: 6px;
+  padding: 2px 10px;
+  margin-left: 8px;
+}
+.compact-date {
+  color: #888;
+  font-size: 0.97rem;
+  margin-left: auto;
+}
+
+.notification-error {
+  color: #d32f2f;
+  margin-bottom: 12px;
+}
+.notification-empty {
+  color: #888;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 32px;
+}
+
+@media (max-width: 900px) {
+  .notification-page-container {
+    padding: 18px 4px 12px 4px;
+    margin-top: 16px;
+  }
+  .compact-row {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .notification-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .notification-page-container {
+    padding: 6px 0 6px 0;
+    border-radius: 0;
+    margin-top: 0;
+  }
+  .notification-card {
+    padding: 10px 8px;
+    font-size: 0.97rem;
+  }
+} 

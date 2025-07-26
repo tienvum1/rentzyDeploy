@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+logs
+*.log
+
+# Build output
+build/
+dist/
+
+# Coverage
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# React/Next.js
+fe/build/
+fe/.next/
+
+# Misc
+*.local
+*.cache
+
+# Optional: database
+*.sqlite
+*.db
+
+# Optional: test output
+*.test.js.snap
+
+# Optional: Mac system files
+Icon?
+
+# Optional: Windows system files
+Desktop.ini
+
+# Optional: Linux system files
+*~ 

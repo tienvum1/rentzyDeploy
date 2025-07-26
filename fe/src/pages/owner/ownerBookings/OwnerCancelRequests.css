@@ -1,0 +1,109 @@
+.owner-cancel-requests-container {
+  max-width: 1200px;
+  margin-left : 260px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 18px 24px 18px;
+}
+.owner-cancel-requests-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ocr-table-wrapper {
+  overflow-x: auto;
+}
+.ocr-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9fafb;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.ocr-table th, .ocr-table td {
+  padding: 12px 8px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+.ocr-table th {
+  background: #f1f5f9;
+  color: #2563eb;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+}
+.ocr-table tr {
+  border-bottom: 1px solid #e2e8f0;
+}
+.ocr-table tr:last-child {
+  border-bottom: none;
+}
+.ocr-table td {
+  color: #2d3748;
+  vertical-align: middle;
+}
+.ocr-approve-btn, .ocr-reject-btn {
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 7px 16px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ocr-approve-btn {
+  background: linear-gradient(90deg,#38b000 0%,#70e000 100%);
+  color: #fff;
+}
+.ocr-approve-btn:disabled {
+  background: #b7e4c7;
+  color: #fff;
+  cursor: not-allowed;
+}
+.ocr-reject-btn {
+  background: linear-gradient(90deg,#e53e3e 0%,#f87171 100%);
+  color: #fff;
+}
+.ocr-reject-btn:disabled {
+  background: #fecaca;
+  color: #fff;
+  cursor: not-allowed;
+}
+.ocr-loading, .ocr-error, .ocr-empty {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #475569;
+  margin: 32px 0 16px 0;
+}
+.ocr-error {
+  color: #e53e3e;
+}
+.ocr-empty {
+  color: #64748b;
+}
+@media (max-width: 900px) {
+  .owner-cancel-requests-container {
+    padding: 12px 2vw 16px 2vw;
+  }
+  .ocr-table th, .ocr-table td {
+    font-size: 0.85rem;
+    padding: 6px 4px;
+  }
+  .owner-cancel-requests-container h2 {
+    font-size: 1.2rem;
+  }
+  .ocr-approve-btn, .ocr-reject-btn {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    margin-right: 4px;
+  }
+}

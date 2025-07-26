@@ -1,0 +1,335 @@
+/* Variables for consistent colors and spacing */
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --success-color: #28a745; /* Green */
+    --danger-color: #dc3545; /* Red */
+    --warning-color: #ffc107; /* Yellow */
+    --info-color: #17a2b8; /* Cyan */
+    --light-color: #f8f9fa; /* Light background */
+    --dark-color: #343a40; /* Dark text */
+    --border-color: #dee2e6; /* Table border color */
+    --border-radius: 8px; /* General border radius */
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 25px;
+}
+.admin-dashboard-layout {
+    margin-left :250px;
+}
+
+.vehicle-management-container {
+    padding: var(--spacing-lg);
+    margin-left: 250px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    margin-left :250px;
+}
+
+.vehicle-management-container h2 {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-lg);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.vehicle-management-container button {
+    padding: var(--spacing-md);
+    margin-right: var(--spacing-sm);
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.vehicle-management-container button:hover {
+    opacity: 0.9;
+}
+
+.add-buttons {
+    margin-bottom: var(--spacing-lg);
+}
+
+.add-buttons button {
+    padding: var(--spacing-md);
+    margin-right: var(--spacing-sm);
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.add-buttons button.btn-add-motorbike {
+    background-color: var(--secondary-color);
+}
+
+.add-buttons button:hover {
+    opacity: 0.9;
+}
+
+/* Table Styling */
+.vehicles-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.vehicles-table thead {
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.vehicles-table th {
+    padding: var(--spacing-md) var(--spacing-sm);
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.vehicles-table td {
+    padding: var(--spacing-md) var(--spacing-sm);
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    font-size: 0.95em;
+    color: var(--dark-color);
+}
+
+.vehicles-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Image Thumbnail in Table */
+.vehicles-table .vehicle-thumbnail {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    display: block;
+}
+
+/* Action Buttons in Table */
+.vehicles-table .btn-action {
+    padding: var(--spacing-sm);
+    margin-right: var(--spacing-sm);
+    font-size: 0.85em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.vehicles-table .btn-action.btn-edit {
+    background-color: var(--info-color);
+    color: white;
+    border: none;
+}
+
+.vehicles-table .btn-action.btn-edit:hover {
+    background-color: #138496;
+}
+
+.vehicles-table .btn-action.btn-delete {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+}
+
+.vehicles-table .btn-action.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* No vehicles message */
+.vehicle-list-view p {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+/* Error message */
+.vehicle-list-view .error-message {
+    color: var(--danger-color);
+    font-weight: 600;
+}
+
+.vehicle-management-content {
+    padding: var(--spacing-md);
+}
+
+/* Styles for the inner content wrapper */
+.vehicles-requests-inner-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vehicles-requests-inner-content h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table Styles (reused from OwnerRequestsPage.css or similar) */
+.vehicles-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.vehicles-table th,
+.vehicles-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top; /* Align content to top in cells */
+}
+
+.vehicles-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.vehicles-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.vehicles-table tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+/* Thumbnail Image Style */
+.vehicle-thumbnail {
+    width: 80px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.vehicle-thumbnail:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Action Button Styles */
+.btn-action {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px; /* Add space below buttons */
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-action:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Rejection Reason Input Style */
+.rejection-reason-input {
+    display: block; /* Make input take full width below buttons */
+    width: 100%; /* Adjust width as needed */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Error and No Requests Message Styles */
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.no-requests-message-container {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #e9ecef;
+    color: #555;
+    margin-top: 20px;
+}
+
+.no-requests-message-container p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Modal Styles (reused from OwnerRequestsPage.css or similar) */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .vehicles-requests-inner-content {
+        padding: 10px;
+    }
+
+    .vehicles-table th,
+    .vehicles-table td {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    .btn-action, .rejection-reason-input {
+        font-size: 0.7em;
+        padding: 4px 8px;
+    }
+}
+

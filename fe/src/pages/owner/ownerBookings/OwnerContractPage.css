@@ -1,0 +1,181 @@
+/* Nền ngoài */
+.owner-contract-layout {
+  min-height: 100vh;
+  background: #f7f8fa;
+  display: flex;
+}
+
+.owner-contract-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0 64px 0;
+  margin-left: 260px;
+}
+
+.contract-a4-container {
+  width: 794px;
+  min-height: 1123px;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(60,72,88,0.13);
+  border-radius: 12px;
+  border: 1.5px solid #e0e4ea;
+  padding: 48px 56px 56px 56px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.contract-header-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.contract-header-right {
+  text-align: center;
+  flex: 1;
+}
+
+.contract-nation {
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.contract-motto {
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.contract-dash {
+  margin: 6px 0 6px 0;
+}
+
+.contract-number {
+  font-size: 1.01rem;
+}
+
+.contract-date {
+  font-size: 1.01rem;
+  margin-bottom: 8px;
+}
+
+.contract-title-main {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: bold;
+  margin: 18px 0 12px 0;
+  letter-spacing: 1px;
+}
+
+.contract-legal {
+  margin-bottom: 8px;
+}
+
+.contract-between {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.contract-party {
+  margin-bottom: 8px;
+}
+
+.contract-section {
+  margin-bottom: 12px;
+}
+
+.contract-signature-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.contract-signature-col {
+  flex: 1;
+  text-align: center;
+}
+
+.contract-signature-space {
+  font-size: 0.98rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.contract-signature-box {
+  width: 220px;
+  height: 110px;
+  margin: 0 auto 8px auto;
+  background: #fafbfc;
+  border: 1px dashed #bbb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.signature-placeholder-text {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.98rem;
+  pointer-events: none;
+}
+
+.contract-signature-name {
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.contract-footer-note {
+  margin-top: 24px;
+  font-size: 1.01rem;
+  color: #666;
+  text-align: center;
+  background: #f7f8fa;
+  border-radius: 8px;
+  padding: 12px 18px;
+}
+
+.contract-loading, .contract-error {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #1976d2;
+  margin-top: 48px;
+}
+
+.owner-contract-back-btn {
+  margin-bottom: 18px;
+  align-self: flex-start;
+  background: linear-gradient(90deg,#e3f2fd 0%,#bbdefb 100%);
+  color: #1976d2;
+  border: 1.5px solid #1976d2;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.owner-contract-back-btn:hover {
+  background: #1976d2;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+}
+
+@media (max-width: 700px) {
+  .owner-contract-back-btn {
+    font-size: 0.97rem;
+    padding: 6px 10px;
+  }
+} 

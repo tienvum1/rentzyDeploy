@@ -1,0 +1,528 @@
+/* ContractPage.css */
+.contract-root {
+  max-width: 820px;
+  margin: 32px auto;
+  background: #fff;
+  padding: 36px 32px 40px 32px;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  font-family: 'Times New Roman', Times, serif;
+  color: #22223b;
+}
+
+.contract-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+.contract-header-left, .contract-header-right {
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+.contract-company {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.contract-header-right {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contract-nation {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.18rem;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.contract-motto {
+  font-style: italic;
+  font-size: 1.08rem;
+  margin-bottom: 2px;
+}
+.contract-dash {
+  color: #888;
+  font-size: 1.01rem;
+  margin: 2px 0 2px 0;
+}
+.contract-number {
+  font-size: 1.04rem;
+  margin: 4px 0 2px 0;
+  font-weight: 500;
+}
+.contract-date {
+  font-size: 1.04rem;
+  margin-top: 2px;
+}
+
+.contract-title-main {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 18px 0 16px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contract-legal {
+  font-size: 1.01rem;
+  margin-bottom: 12px;
+  margin-left: 8px;
+}
+
+.contract-between {
+  text-align: left;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin: 18px 0 8px 0;
+}
+
+.contract-party {
+  margin-bottom: 8px;
+  font-size: 1.04rem;
+}
+.contract-party b {
+  font-weight: 700;
+  margin-right: 6px;
+}
+.contract-dots {
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.contract-agree {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin: 18px 0 10px 0;
+}
+
+.contract-section {
+  margin-bottom: 18px;
+  font-size: 1.04rem;
+}
+.contract-section > b {
+  font-size: 1.08rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+.contract-vehicle-info {
+  margin: 6px 0 6px 18px;
+  padding: 0;
+}
+.contract-vehicle-info li {
+  margin-bottom: 2px;
+}
+
+.contract-signature-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 38px;
+  margin-bottom: 18px;
+}
+.contract-signature-col {
+  width: 44%;
+  text-align: center;
+}
+.contract-signature-space {
+  font-style: italic;
+  color: #888;
+}
+
+.contract-footer-note {
+  text-align: center;
+  font-size: 0.98rem;
+  color: #666;
+  margin-top: 18px;
+  font-style: italic;
+}
+
+.contract-loading, .contract-error {
+  text-align: center;
+  font-size: 1.15rem;
+  margin: 60px 0;
+  color: #2563eb;
+}
+
+.contract-signature-box {
+  margin: 18px auto 8px auto;
+  width: 80%;
+  height: 48px;
+  background: transparent;
+}
+
+.signature-box-with-placeholder {
+  border: 2px dashed #bdbdbd;
+  border-radius: 8px;
+  width: 220px;
+  height: 110px;
+  position: relative;
+  background: #fafbfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.signature-placeholder-text {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bdbdbd;
+  font-size: 1.05rem;
+  font-style: italic;
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+}
+.sigCanvas {
+  background: transparent;
+  position: absolute;
+  left: 0; top: 0;
+  z-index: 1;
+  height: 110px !important;
+}
+
+
+.contract-progress-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 18px;
+}
+.contract-progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 0.98em;
+  color: #bdbdbd;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+.contract-progress-step.completed .step-icon {
+  background-color: #4CAF50;
+  color: #fff;
+}
+.contract-progress-step.completed .step-text {
+  color: #4CAF50;
+  font-weight: 600;
+}
+.contract-progress-step.current .step-icon {
+  background-color: #1976d2;
+  color: #fff;
+}
+.contract-progress-step.current .step-text {
+  color: #1976d2;
+  font-weight: 700;
+}
+.contract-progress-step .step-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+.contract-progress-step .step-text {
+  margin-top: 4px;
+  font-size: 1em;
+  font-weight: 500;
+}
+.contract-progress-divider {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 0 -20px;
+  position: relative;
+  top: 40px;
+  z-index: 10;
+  border-bottom-width: 20px
+}
+.contract-progress-divider.completed {
+  background-color: #4CAF50;
+}
+.contract-progress-divider.current {
+  background-color: #1976d2;
+}
+@media (max-width: 768px) {
+  .progress-steps {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .progress-step {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: auto;
+  }
+  
+  .step-icon {
+    margin-right: 1rem;
+    margin-bottom: 0;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+  
+  .step-text {
+    max-width: none;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .progress-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .contract-root {
+    padding: 18px 4vw 24px 4vw;
+  }
+  .contract-header-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .contract-signature-row {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .contract-signature-col {
+    width: 100%;
+  }
+} 
+
+.modern-progress-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 32px 0 40px 0;
+  width: 100%;
+  gap: 0;
+}
+
+.modern-progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  min-width: 140px;
+}
+
+.modern-progress-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e0e4ea;
+  color: #b0b8c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  z-index: 2;
+  border: 3px solid #e0e4ea;
+  transition: all 0.2s;
+}
+
+.modern-progress-circle.active {
+  background: #43b04a;
+  color: #fff;
+  border: 3px solid #43b04a;
+  box-shadow: 0 2px 8px #e3eaff44;
+}
+
+.modern-progress-circle.current {
+  box-shadow: 0 0 0 4px #b6e2c6;
+}
+
+.modern-progress-label {
+  font-size: 1.15rem;
+  color: #b0b8c9;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 2px;
+  min-width: 90px;
+}
+
+.modern-progress-label.active {
+  color: #43b04a;
+}
+
+.modern-progress-line {
+  position: absolute;
+  top: 22px;
+  left: 100%;
+  width: calc(100% - 44px);
+  height: 4px;
+  background: #e0e4ea;
+  z-index: 1;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.modern-progress-line.active {
+  background: repeating-linear-gradient(90deg, #43b04a, #43b04a 8px, #e0e4ea 8px, #e0e4ea 16px);
+} 
+
+.progress-bar-outer {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px 0 rgba(60,72,88,0.08);
+  padding: 32px 32px 24px 32px;
+  margin: 32px auto 48px auto;
+  max-width: 1100px;
+  min-width: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  max-width: 150px;
+}
+
+.step-icon {
+  width: 3.3rem;
+  height: 3.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.step-icon.active {
+  background-color: #10b981;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.step-icon.current {
+  border: 3px solid #10b981;
+  color: #10b981;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+}
+
+.step-icon.inactive {
+  border: 3px solid #d1d5db;
+  color: #9ca3af;
+  background-color: #f9fafb;
+}
+
+.step-text {
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 100%;
+  word-wrap: break-word;
+  font-weight: 500;
+  color: #6b7280;
+  padding: 0 0.25rem;
+}
+
+.progress-step.completed .step-text {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.progress-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 1.65rem;
+  left: calc(50% + 1.65rem);
+  right: calc(-50% + 1.65rem);
+  height: 2px;
+  background-color: #e5e7eb;
+  z-index: 1;
+}
+
+.progress-step.completed:not(:last-child)::after {
+  background-color: #10b981;
+}
+
+
+
+.contract-a4-container {
+  width: 794px;
+  min-height: 1123px;
+  margin: 0 auto 48px auto;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(60,72,88,0.13);
+  border: 1.5px solid #e0e4ea;
+  padding: 48px 56px 56px 56px;
+  position: relative;
+}
+
+.contract-header {
+  text-align: center;
+  border-bottom: 2px solid #1976d2;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.contract-logo {
+  width: 64px;
+  margin-bottom: 8px;
+} 
+
+.contract-page-bg {
+  min-height: 100vh;
+  background: #f7f8fa;
+  padding: 8px 0 64px 0;   /* Đưa progress bar lên rất sát top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-bar-wrapper {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px 0 rgba(60,72,88,0.08);
+  padding: 32px 32px 24px 32px;
+  margin-bottom: 20px;
+  width: 794px;
+  display: flex;
+  justify-content: center;
+}
+

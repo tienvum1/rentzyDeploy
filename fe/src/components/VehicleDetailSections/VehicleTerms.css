@@ -1,0 +1,79 @@
+.vehicle-terms {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    color: #374151;
+  }
+  
+  .vehicle-terms__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #000000;
+  }
+  
+  .vehicle-terms__list {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+  
+  .vehicle-terms__item {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .vehicle-terms__footer {
+    margin-top: 16px;
+    font-size: 1.1rem;
+    color: #000000;
+  }
+  
+  .cancel-policy-table {
+    margin: 24px 0 0 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+    padding: 0 0 18px 0;
+    overflow-x: auto;
+  }
+  .cancel-policy-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1.08rem;
+  }
+  .cancel-policy-table th, .cancel-policy-table td {
+    padding: 18px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+  }
+  .cancel-policy-table th {
+    background: #fafbfc;
+    color: #2c3e50;
+    font-size: 1.12rem;
+    font-weight: 700;
+  }
+  .cancel-policy-table tr:last-child td {
+    border-bottom: none;
+  }
+  .cancel-icon {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  .cancel-icon.success {
+    color: #1abc9c;
+  }
+  .cancel-icon.fail {
+    color: #e74c3c;
+  }
+  @media (max-width: 600px) {
+    .cancel-policy-table th, .cancel-policy-table td {
+      padding: 10px 6px;
+      font-size: 0.98rem;
+    }
+  }
+  
